@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "676526411047",
+    "firebase_url": "https://home-enviorment-monitor.firebaseio.com",
+    "project_id": "home-enviorment-monitor",
+    "storage_bucket": "home-enviorment-monitor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676526411047:android:d4dd48d33b631356",
+        "android_client_info": {
+          "package_name": "com.cipher.homeio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676526411047-vfja3cu3o19b26i1sai9g9ec9b97hog6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cipher.homeio",
+            "certificate_hash": "7ce4c36f12557948ba3841a3b95bda1d10db654a"
+          }
+        },
+        {
+          "client_id": "676526411047-aing5ok83sj22dkna78jq52ib3s247g2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmejltFp1JhH8YC0MvQDV2Nk2xwwkfIgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "676526411047-aing5ok83sj22dkna78jq52ib3s247g2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

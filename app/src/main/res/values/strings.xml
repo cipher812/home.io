@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">home.io</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="temprature">Temprature :</string>
+    <string name="humid">Humidity :</string>
+    <string name="psr">Pressure</string>
+    <string name="psr1">Pressure :</string>
+    <string name="alt">Altitude :</string>
+    <string name="title">Home Enviorment Monitor V0.1</string>
+    <string name="ver">Version 0.1b</string>
+</resources>
