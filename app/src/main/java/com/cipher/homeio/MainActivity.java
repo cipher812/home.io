@@ -1,6 +1,8 @@
 package com.cipher.homeio;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -124,6 +126,22 @@ public class MainActivity extends AppCompatActivity
         }
     };
 
+    private boolean isOnline()
+    {
+        Context context=getApplicationContext();
+        ConnectivityManager cm= (ConnectivityManager)context.getSystemService(context.CONNECTIVITY_SERVICE);
+        NetworkInfo ninfo=cm.getActiveNetworkInfo();
+
+        if(ninfo!=null || ninfo.isConnectedOrConnecting())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -144,9 +162,30 @@ public class MainActivity extends AppCompatActivity
     {
         super.onStart();
         Context context=getApplicationContext();
-        Toast toast = Toast.makeText(context, "Firebase ONLINE", Toast.LENGTH_LONG);
-        toast.show();
-        firebase();
+        Toast toast;
+
+
+        if(isOnline())
+        {
+            toast=Toast.makeText(context,"Connection Active",Toast.LENGTH_SHORT);
+            toast.show();
+            try
+            {
+
+                Thread.sleep(2000);
+            }
+            catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+            firebase();
+        }
+        else
+        {
+            toast=Toast.makeText(context,"Connection offline",Toast.LENGTH_SHORT);
+            toast.show();
+        }
+
     }
 
 }
