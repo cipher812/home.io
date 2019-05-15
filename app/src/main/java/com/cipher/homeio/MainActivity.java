@@ -164,27 +164,24 @@ public class MainActivity extends AppCompatActivity
         Context context=getApplicationContext();
         Toast toast;
 
+        try {
 
-        if(isOnline())
-        {
-            toast=Toast.makeText(context,"Connection Active",Toast.LENGTH_SHORT);
-            toast.show();
-            try
-            {
-
-                Thread.sleep(2000);
+            if (isOnline()) {
+                toast = Toast.makeText(context, "Connection Active", Toast.LENGTH_SHORT);
+                toast.show();
+            } else {
+                toast = Toast.makeText(context, "Connection Offline", Toast.LENGTH_SHORT);
+                toast.show();
             }
-            catch (InterruptedException e)
-            {
-                e.printStackTrace();
-            }
-            firebase();
         }
-        else
+        catch (NullPointerException e)
         {
-            toast=Toast.makeText(context,"Connection offline",Toast.LENGTH_SHORT);
+            Log.d("Ex","Exception");
+            toast = Toast.makeText(context, "Connection Offline", Toast.LENGTH_SHORT);
             toast.show();
         }
+
+        firebase();
 
     }
 
