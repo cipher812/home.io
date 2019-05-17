@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity
         {
             Float val=dataSnapshot.getValue(Float.class);
             Log.d("DB",String.valueOf(val));
-            txtHmd.setText(String.valueOf(val)+" %");
+            txtHmd.setText(String.valueOf(val)+" % RH");
         }
 
         @Override
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity
             {
                 Float val=dataSnapshot.getValue(Float.class);
                 Log.d("DB",String.valueOf(val));
-                txtPsr.setText(String.valueOf(val)+" hPa");
+                txtPsr.setText(val+" hPa");
             }
 
             @Override

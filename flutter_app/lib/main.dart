@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -45,6 +46,43 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  var color=Colors.white;
+
+  void changecol()
+  {
+    setState(() {
+      if(color==Colors.blue)
+        {
+          color=Colors.red;
+        }
+      else
+        {
+          color=Colors.white;
+        }
+    });
+
+    @override
+    Widget build(BuildContext context)
+    {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text(widget.title),
+          body:Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  "Hello",
+                    style:TextStyle(fontSize: 50,color: color)
+                )
+              ],
+            ),
+          )
+        ),
+        floatingActionButton: FloatingActionButton(onPressed: changecol),
+      );
+    }
+  }
 
   void _incrementCounter() {
     setState(() {
