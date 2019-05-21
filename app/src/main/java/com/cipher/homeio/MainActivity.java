@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity
         {
             Float val=dataSnapshot.getValue(Float.class);
             Log.d("DB",String.valueOf(val));
-            txtHmd.setText(String.valueOf(val)+" % RH");
+            txtHmd.setText(val+" % RH");
         }
 
         @Override
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity
             {
                 Float val=dataSnapshot.getValue(Float.class);
                 Log.d("DB",String.valueOf(val));
-                txtAlt.setText(String.valueOf(val)+" Mtr");
+                txtAlt.setText(val+" Mtr");
             }
 
             @Override
@@ -166,7 +166,8 @@ public class MainActivity extends AppCompatActivity
 
         try {
 
-            if (isOnline()) {
+            if (isOnline())
+            {
                 toast = Toast.makeText(context, "Connection Active", Toast.LENGTH_SHORT);
                 toast.show();
             } else {
